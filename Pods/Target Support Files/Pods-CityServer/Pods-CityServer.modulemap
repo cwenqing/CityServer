@@ -1,0 +1,6 @@
+framework module Pods_CityServer {
+  umbrella header "Pods-CityServer-umbrella.h"
+
+  export *
+  module * { export * }
+}
