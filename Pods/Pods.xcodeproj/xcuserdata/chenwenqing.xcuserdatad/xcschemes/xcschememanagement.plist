@@ -8,36 +8,55 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-CityServer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>SDAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SGPagingView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -52,12 +71,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3D425EB275A3B707AD57DB358FD04FC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>439A8EA114FFB10800204EEDD4C29B07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>64874CC077316769C3901288CC8CAE8B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>823C4675B5DC0DDB78E0689A5B722DFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>975520FCCD078AF422B776C1FAB0EC1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

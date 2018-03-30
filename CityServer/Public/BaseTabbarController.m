@@ -16,15 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]} forState:UIControlStateSelected];
+    self.tabBar.tintColor = RGBA(18, 21, 31, 1);
+    
     // Do any additional setup after loading the view.
-    _noticeCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth/8*5 + 8, 0, 20, 20)];
-    _noticeCountLabel.backgroundColor = [UIColor redColor];
-    _noticeCountLabel.textColor = [UIColor whiteColor];
-    _noticeCountLabel.textAlignment = NSTextAlignmentCenter;
-    _noticeCountLabel.layer.cornerRadius = 10;
-    _noticeCountLabel.layer.masksToBounds = YES;
-    [self.tabBar addSubview:_noticeCountLabel];
-    _noticeCountLabel.hidden = YES;
+//    _noticeCountLabel = [[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth/8*5 + 8, 0, 20, 20)];
+//    _noticeCountLabel.backgroundColor = [UIColor redColor];
+//    _noticeCountLabel.textColor = [UIColor whiteColor];
+//    _noticeCountLabel.textAlignment = NSTextAlignmentCenter;
+//    _noticeCountLabel.layer.cornerRadius = 10;
+//    _noticeCountLabel.layer.masksToBounds = YES;
+//    [self.tabBar addSubview:_noticeCountLabel];
+//    _noticeCountLabel.hidden = YES;
 
 }
 
@@ -35,6 +38,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dealloc{
+    NSLog(@"Tabbar移除");
+}
 
 #pragma mark - Navigation
 

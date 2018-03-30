@@ -28,7 +28,7 @@
 - (IBAction)sure:(UIButton *)sender {
     NSDate *select = [datePickerView date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *date =  [dateFormatter stringFromDate:select];
     [self.delegate datePickerWithDate:date];
 }

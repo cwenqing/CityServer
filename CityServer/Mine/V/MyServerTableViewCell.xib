@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="MyServerTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ApU-1g-uv8">
+                        <rect key="frame" x="23" y="18" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="S0U-Vk-Ggt"/>
+                            <constraint firstAttribute="height" constant="70" id="jI2-6N-oPJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招收水泥工" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irN-Vp-Bcr">
+                        <rect key="frame" x="108" y="18" width="196" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="h5S-8q-2yR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.32782799005508423" green="0.32783645391464233" blue="0.32783189415931702" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布于12:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlV-5p-tIz">
+                        <rect key="frame" x="108" y="61.5" width="126" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="VQs-oE-Cjc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.66774696111679077" green="0.66776293516159058" blue="0.66775429248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-l9-hTL">
+                        <rect key="frame" x="235" y="59.5" width="57" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="XZ4-FC-uIF"/>
+                            <constraint firstAttribute="width" constant="57" id="j5r-ZZ-R8P"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="关闭服务">
+                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" title="已关闭">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="closeServerButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="K1m-DA-iyM"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ApU-1g-uv8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="7d8-tL-pkq"/>
+                    <constraint firstItem="irN-Vp-Bcr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="9Mg-sA-cws"/>
+                    <constraint firstItem="6nJ-l9-hTL" firstAttribute="leading" secondItem="MlV-5p-tIz" secondAttribute="trailing" constant="1" id="YR5-cT-B5m"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6nJ-l9-hTL" secondAttribute="bottom" constant="4.5" id="Yak-Qg-2bv"/>
+                    <constraint firstItem="MlV-5p-tIz" firstAttribute="leading" secondItem="ApU-1g-uv8" secondAttribute="trailing" constant="15" id="YfE-D7-lNF"/>
+                    <constraint firstItem="irN-Vp-Bcr" firstAttribute="leading" secondItem="ApU-1g-uv8" secondAttribute="trailing" constant="15" id="ZEZ-h8-v9x"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MlV-5p-tIz" secondAttribute="bottom" constant="6.5" id="fdk-cb-NsW"/>
+                    <constraint firstItem="ApU-1g-uv8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="j3k-qb-lVc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6nJ-l9-hTL" secondAttribute="trailing" constant="12" id="qEe-0S-ZhZ"/>
+                    <constraint firstItem="irN-Vp-Bcr" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="sdF-yX-qOf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="closeServerButton" destination="6nJ-l9-hTL" id="i2d-7K-Qbo"/>
+                <outlet property="serverImg" destination="ApU-1g-uv8" id="ot1-Mf-Vyb"/>
+                <outlet property="serverTimeLabel" destination="MlV-5p-tIz" id="4sz-qP-Vwq"/>
+                <outlet property="serverTitleLabel" destination="irN-Vp-Bcr" id="i8v-TD-37V"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

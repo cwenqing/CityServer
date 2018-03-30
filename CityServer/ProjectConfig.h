@@ -10,6 +10,9 @@
 #import "UIColor+extension.h"
 #import "NSString+MD5.h"
 #import "MJRefresh.h"
+#import "MemberCofig.h"
+#import <UShareUI/UShareUI.h>
+#import "AppDelegate.h"
 
 #define MainScreenFrame [[UIScreen mainScreen] bounds]
 
@@ -19,11 +22,14 @@
 
 #define ScreenHeigth                                MainScreenFrame.size.height
 
-#define TabBarHeight                           49
+// iPhone X
+#define  LL_iPhoneX (ScreenWidth == 375.f && ScreenHeigth == 812.f ? YES : NO)
 
-#define NavationBarHeigth                       64
+#define TabBarHeight                           (LL_iPhoneX ? (49.f+34.f) : 49.f)
 
-#define StatueBarHeight                        20
+#define NavationBarHeigth                       (LL_iPhoneX ? 88.f : 64.f)
+
+#define StatueBarHeight                         (LL_iPhoneX ? 44.f : 20.f)
 
 #define ViewWidth(x)                           CGRectGetWidth(x.bounds)
 
@@ -45,15 +51,37 @@
 
 #define YFlage (Version < 7) ? 20 : 0
 
-#define NavColor RGBA(15,114,180,1)
+#define NavColor RGBA(56,107,248,1)
+
+#define BACColor RGBA(244,243,242,1)
 
 #define NextPoint(view)    CGPointMake((view).frame.size.width+(view).frame.origin.x, (view).frame.size.height + (view).frame.origin.y)
 
+#define MEMBER [MemberCofig shareInstance]
+
+#define IMAGE(image) [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMAGE_PATH, image]]
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define KAppDelegate ((AppDelegate*)[UIApplication sharedApplication].delegate)
+
+//状态条的高
+#define StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+//得到屏幕bounds
+#define SCREEN_SIZE [UIScreen mainScreen].bounds
+//得到屏幕height
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+//得到屏幕width
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 
 typedef void (^Callback)(id obj);
 
 @interface ProjectConfig : NSObject
 
++ (UIImage *)getScreenShotImageFromVideoPath:(NSString *)filePath;
+
+/** 通过行数, 返回更新时间 */
++ (NSString *)updateTimeForRow:(NSInteger)oldTime;
 
 + (MBProgressHUD *)createMBProgressWithMessage:(NSString *)message;
 
@@ -77,5 +105,8 @@ typedef void (^Callback)(id obj);
 + (NSString *)getCurrentTime;
 
 +(UIImage*) createImageWithColor:(UIColor*) color;
+
+//友盟分享
++(void)UMSocialWithImage:(UIImage *)image AndTitle:(NSString *)title AndContent:(NSString *)content AndWebpageUrl:(NSString *)webpageUrl AndCurrentViewController:(id)currentViewController;
 
 @end

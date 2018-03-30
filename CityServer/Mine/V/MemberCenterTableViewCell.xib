@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MemberCenterTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALT-id-tt0">
+                        <rect key="frame" x="0.0" y="6" width="320" height="56"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wodedongtai" translatesAutoresizingMaskIntoConstraints="NO" id="M69-ED-d5q">
+                                <rect key="frame" x="23" y="19" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="1nC-XL-mvr"/>
+                                    <constraint firstAttribute="width" constant="16" id="4Za-Xa-8uy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的动态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-PO-g37">
+                                <rect key="frame" x="49" y="17" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="BvC-d0-apK"/>
+                                    <constraint firstAttribute="height" constant="21" id="RLt-aJ-jwC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.20523443818092346" green="0.19148248434066772" blue="0.19131007790565491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellAccess" translatesAutoresizingMaskIntoConstraints="NO" id="3x6-9t-LAC">
+                                <rect key="frame" x="293" y="18" width="10" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="TtC-kR-UA9"/>
+                                    <constraint firstAttribute="height" constant="17" id="Xdl-T5-ck9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3x6-9t-LAC" firstAttribute="top" secondItem="ALT-id-tt0" secondAttribute="top" constant="18" id="2xZ-6r-cBH"/>
+                            <constraint firstItem="t1a-PO-g37" firstAttribute="top" secondItem="ALT-id-tt0" secondAttribute="top" constant="17" id="5mk-qd-Y4e"/>
+                            <constraint firstItem="M69-ED-d5q" firstAttribute="leading" secondItem="ALT-id-tt0" secondAttribute="leading" constant="23" id="By3-ZZ-0fS"/>
+                            <constraint firstAttribute="trailing" secondItem="3x6-9t-LAC" secondAttribute="trailing" constant="17" id="CVY-QR-m0K"/>
+                            <constraint firstItem="t1a-PO-g37" firstAttribute="leading" secondItem="M69-ED-d5q" secondAttribute="trailing" constant="10" id="Q3D-tj-fdi"/>
+                            <constraint firstItem="M69-ED-d5q" firstAttribute="top" secondItem="ALT-id-tt0" secondAttribute="top" constant="19" id="gYZ-ss-eiQ"/>
+                            <constraint firstAttribute="height" constant="56" id="vMr-nd-nZT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95892590280000001" green="0.97322922950000001" blue="0.97944253680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="ALT-id-tt0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="10g-Hg-GHk"/>
+                    <constraint firstAttribute="trailing" secondItem="ALT-id-tt0" secondAttribute="trailing" id="Gzv-tL-bxF"/>
+                    <constraint firstItem="ALT-id-tt0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dQR-63-vrV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImg" destination="M69-ED-d5q" id="dVo-H8-HSi"/>
+                <outlet property="titleLabel" destination="t1a-PO-g37" id="dEC-uo-wrT"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="53"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cellAccess" width="8" height="13"/>
+        <image name="wodedongtai" width="10" height="11"/>
+    </resources>
+</document>

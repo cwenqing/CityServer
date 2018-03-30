@@ -11,7 +11,10 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-
+@property (nonatomic ,assign)float latitude;
+@property (nonatomic ,assign)float longitude;
+@property (nonatomic ,copy)NSString *province;
+@property (nonatomic ,copy)NSString *city;
+@property (nonatomic ,copy)NSString *district;
 @end
 

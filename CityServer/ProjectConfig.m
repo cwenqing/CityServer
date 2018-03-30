@@ -11,8 +11,74 @@
 #import <arpa/inet.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 @implementation ProjectConfig
 
++ (UIImage *)getScreenShotImageFromVideoPath:(NSString *)filePath{
+
+    UIImage *shotImage;
+    //视频路径URL
+    NSURL *fileURL = IMAGE(filePath);
+    
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:fileURL options:nil];
+    
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    
+    gen.appliesPreferredTrackTransform = YES;
+    
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    
+    NSError *error = nil;
+    
+    CMTime actualTime;
+    
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    
+    shotImage = [[UIImage alloc] initWithCGImage:image];
+    
+    CGImageRelease(image);
+    
+    return shotImage;
+    
+}
+
+/** 通过行数, 返回更新时间 */
++ (NSString *)updateTimeForRow:(NSInteger)oldTime {
+    // 获取当前时时间戳 1466386762.345715 十位整数 6位小数
+    NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
+    // 创建歌曲时间戳(后台返回的时间 一般是13位数字)
+    NSTimeInterval createTime = oldTime/1000;
+    // 时间差
+    NSTimeInterval time = currentTime - createTime;
+
+    //分钟
+    NSInteger sec = time/60;
+    if (sec<60) {
+        if (sec == 0) {
+            return @"刚刚";
+        }else
+            return [NSString stringWithFormat:@"%ld分钟前",sec];
+    }
+    // 秒转小时
+    NSInteger hours = time/3600;
+    if (hours<24) {
+        return [NSString stringWithFormat:@"%ld小时前",hours];
+    }
+    //秒转天数
+    NSInteger days = time/3600/24;
+    if (days < 30) {
+        return [NSString stringWithFormat:@"%ld天前",days];
+    }
+    //秒转月
+    NSInteger months = time/3600/24/30;
+    if (months < 12) {
+        return [NSString stringWithFormat:@"%ld个月前",months];
+    }
+    //秒转年
+    //秒转年
+    NSInteger years = time/3600/24/30/12;
+    return [NSString stringWithFormat:@"%ld年前",years];
+}
 
 + (MBProgressHUD *)createMBProgressWithMessage:(NSString *)message{
     
@@ -179,7 +245,7 @@
     return  currentTime;
 }
 
-+(UIImage*) createImageWithColor:(UIColor*) color
++(UIImage*)createImageWithColor:(UIColor*) color
 {
     CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
@@ -191,5 +257,43 @@
     return theImage;
 }
 
+//友盟分享
++(void)UMSocialWithImage:(UIImage *)image AndTitle:(NSString *)title AndContent:(NSString *)content AndWebpageUrl:(NSString *)webpageUrl AndCurrentViewController:(id)currentViewController{
+    [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_WechatSession),@(UMSocialPlatformType_WechatTimeLine)]];
+    [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
+        // 根据获取的platformType确定所选平台进行下一步操作
+        //创建分享消息对象
+        UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
+        
+        //创建网页内容对象
+        //        NSString* thumbURL =  imageUrl;
+        UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:title descr:content thumImage:image];
+        
+        //设置网页地址
+        shareObject.webpageUrl = webpageUrl;
+        
+        //分享消息对象设置分享内容对象
+        messageObject.shareObject = shareObject;
+        
+        //调用分享接口
+        [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:currentViewController completion:^(id data, NSError *error) {
+            if (error) {
+                UMSocialLogInfo(@"************Share fail with error %@*********",error);
+            }else{
+                if ([data isKindOfClass:[UMSocialShareResponse class]]) {
+                    UMSocialShareResponse *resp = data;
+                    //分享结果消息
+                    UMSocialLogInfo(@"response message is %@",resp.message);
+                    //第三方原始返回的数据
+                    UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+                    
+                }else{
+                    UMSocialLogInfo(@"response data is %@",data);
+                }
+            }
+        }];
+    }];
+    
+}
 
 @end

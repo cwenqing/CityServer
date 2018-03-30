@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8o-YW-b6u">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYI-qh-4ew">
+                            <rect key="frame" x="34.5" y="19" width="131" height="42"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tongchengfuwu" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-eu-MGm">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="同城服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugm-eE-g4a">
+                                    <rect key="frame" x="51" y="3" width="80" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.43582522869110107" green="0.43617689609527588" blue="0.43587976694107056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="懒得自己找工作" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5J-NZ-5l9">
+                                    <rect key="frame" x="51" y="24" width="80" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="0.70585870742797852" green="0.70640367269515991" blue="0.70594316720962524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="F2E-sD-IpA"/>
+                                <constraint firstAttribute="width" constant="131" id="g7C-zi-ZkE"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="600" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZI-9Y-Jcn">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                            <connections>
+                                <action selector="serverButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="sk5-dv-3qe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="3XH-xL-q8g"/>
+                        <constraint firstItem="5ZI-9Y-Jcn" firstAttribute="leading" secondItem="O8o-YW-b6u" secondAttribute="leading" id="HWc-Ya-QyR"/>
+                        <constraint firstItem="dYI-qh-4ew" firstAttribute="centerX" secondItem="O8o-YW-b6u" secondAttribute="centerX" id="Oha-G4-NfZ"/>
+                        <constraint firstAttribute="trailing" secondItem="5ZI-9Y-Jcn" secondAttribute="trailing" id="VRf-X8-yBR"/>
+                        <constraint firstAttribute="bottom" secondItem="5ZI-9Y-Jcn" secondAttribute="bottom" id="caI-Aw-tVJ"/>
+                        <constraint firstItem="5ZI-9Y-Jcn" firstAttribute="top" secondItem="O8o-YW-b6u" secondAttribute="top" id="lux-OP-apW"/>
+                        <constraint firstItem="dYI-qh-4ew" firstAttribute="centerY" secondItem="O8o-YW-b6u" secondAttribute="centerY" id="qbm-iB-bXp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zl1-8d-65v">
+                    <rect key="frame" x="200" y="0.0" width="200" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tks-Ka-f6J">
+                            <rect key="frame" x="35" y="19" width="131" height="42"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gongyifuwu" translatesAutoresizingMaskIntoConstraints="NO" id="HEV-Ts-XLw">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="公益服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm1-EL-2S0">
+                                    <rect key="frame" x="51" y="3" width="80" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.43582522870000001" green="0.43617689609999999" blue="0.43587976690000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="帮助身边人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCl-Ug-jb7">
+                                    <rect key="frame" x="51" y="24" width="80" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="0.70585870740000001" green="0.70640367270000004" blue="0.70594316720000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="131" id="7ua-WV-ieu"/>
+                                <constraint firstAttribute="height" constant="42" id="ooJ-Z8-HuM"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="601" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-ab-KK2">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                            <connections>
+                                <action selector="serverButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="nhn-Ua-Won"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="7r4-nN-0pc"/>
+                        <constraint firstAttribute="trailing" secondItem="RTV-ab-KK2" secondAttribute="trailing" id="J3h-AJ-4RK"/>
+                        <constraint firstItem="Tks-Ka-f6J" firstAttribute="centerY" secondItem="zl1-8d-65v" secondAttribute="centerY" id="Odh-lv-gCx"/>
+                        <constraint firstItem="Tks-Ka-f6J" firstAttribute="centerX" secondItem="zl1-8d-65v" secondAttribute="centerX" id="Skd-I1-SGO"/>
+                        <constraint firstAttribute="bottom" secondItem="RTV-ab-KK2" secondAttribute="bottom" id="kfS-wi-RcK"/>
+                        <constraint firstItem="RTV-ab-KK2" firstAttribute="top" secondItem="zl1-8d-65v" secondAttribute="top" id="mjT-Tw-bEh"/>
+                        <constraint firstItem="RTV-ab-KK2" firstAttribute="leading" secondItem="zl1-8d-65v" secondAttribute="leading" id="tem-74-bxd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogl-jK-vJu">
+                    <rect key="frame" x="162" y="92" width="163" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.99961215260000003" green="0.3599925041" blue="0.53009182210000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button" image="sousuo"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95890945196151733" green="0.95963555574417114" blue="0.95902186632156372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zl1-8d-65v" firstAttribute="width" secondItem="O8o-YW-b6u" secondAttribute="width" id="JXU-5j-a21"/>
+                <constraint firstItem="zl1-8d-65v" firstAttribute="leading" secondItem="O8o-YW-b6u" secondAttribute="trailing" id="NUo-fb-3dD"/>
+                <constraint firstAttribute="trailing" secondItem="zl1-8d-65v" secondAttribute="trailing" id="dqw-qn-hu7"/>
+                <constraint firstItem="O8o-YW-b6u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mtU-SD-9bA"/>
+                <constraint firstItem="zl1-8d-65v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="niP-13-pMm"/>
+                <constraint firstItem="O8o-YW-b6u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x6Q-5B-Gwd"/>
+                <constraint firstItem="zl1-8d-65v" firstAttribute="leading" secondItem="O8o-YW-b6u" secondAttribute="trailing" id="ySY-nz-dBz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="36" y="-199"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gongyifuwu" width="28" height="28"/>
+        <image name="sousuo" width="11" height="11"/>
+        <image name="tongchengfuwu" width="28" height="28"/>
+    </resources>
+</document>

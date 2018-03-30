@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="FansFollowTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODj-wr-Z6c">
+                        <rect key="frame" x="23" y="11" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="Lnh-ra-Orf"/>
+                            <constraint firstAttribute="height" constant="36" id="hyF-Lo-Np3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPZ-pC-cmk">
+                        <rect key="frame" x="76" y="19" width="164" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="hNp-YY-Hoh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvT-9R-ThQ">
+                        <rect key="frame" x="248" y="16" width="49" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="2Ft-B8-ySD"/>
+                            <constraint firstAttribute="height" constant="26" id="Gxs-Wb-i0d"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="jiaguanzhu"/>
+                        <state key="selected" backgroundImage="quxiaoguanzhu"/>
+                        <connections>
+                            <action selector="attentionOrNotButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xeq-Ww-TQ5"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UvT-9R-ThQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1yV-fx-EgM"/>
+                    <constraint firstItem="OPZ-pC-cmk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5rj-t3-kq1"/>
+                    <constraint firstItem="ODj-wr-Z6c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="7kB-Tq-oZD"/>
+                    <constraint firstItem="ODj-wr-Z6c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HmG-Au-xPc"/>
+                    <constraint firstItem="OPZ-pC-cmk" firstAttribute="leading" secondItem="ODj-wr-Z6c" secondAttribute="trailing" constant="17" id="bP7-F1-yB5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UvT-9R-ThQ" secondAttribute="trailing" constant="7" id="gPZ-C0-Olx"/>
+                    <constraint firstItem="UvT-9R-ThQ" firstAttribute="leading" secondItem="OPZ-pC-cmk" secondAttribute="trailing" constant="8" id="s8H-eG-bgJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="attentionButton" destination="UvT-9R-ThQ" id="uEx-mb-bVC"/>
+                <outlet property="headImg" destination="ODj-wr-Z6c" id="lBU-C9-K2h"/>
+                <outlet property="nameLabel" destination="OPZ-pC-cmk" id="ZZA-LV-Eqm"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="jiaguanzhu" width="49" height="25"/>
+        <image name="quxiaoguanzhu" width="49" height="25"/>
+    </resources>
+</document>

@@ -9,15 +9,36 @@
 #ifndef CityServer_pch
 #define CityServer_pch
 
+#ifdef __OBJC__
+
 #import <SDAutoLayout/SDAutoLayout.h>
 #import <AFNetworking/AFNetworking.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <MJRefresh/MJRefresh.h>
 #import <MBProgressHUD/MBProgressHUD.h>
-
+#import <SGPagingView/SGPagingView.h>
+#import <RongIMKit/RongIMKit.h>
+#import <AlipaySDK/AlipaySDK.h>
+#import <WXApi.h>
+#import <UMShare/UMShare.h>
 
 #import "ProjectConfig.h"
+#import "URLConfig.h"
+#import "CWNetWorkTool.h"
+
+#import <MGSwipeTableCell/MGSwipeTableCell.h>
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import <LYEmptyView/LYEmptyViewHeader.h>
+#import <PPBadgeView/PPBadgeView.h>
+
+#import <PgySDK/PgyManager.h>
+#import <PgyUpdate/PgyUpdateManager.h>
+
+#import "Utility.h"
+#endif
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

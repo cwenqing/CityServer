@@ -17,16 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationBar setBarTintColor:NavColor];
-    self.navigationBar.opaque = YES;
-    self.navigationBar.translucent = YES;
+//    [self.navigationBar setBarTintColor:NavColor];
+//    self.navigationBar.opaque = YES;
+//    self.navigationBar.translucent = YES;
+//    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+//    [self.navigationBar setTintColor:[UIColor whiteColor]];
+//    self.tabBarItem.selectedImage = [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:NavColor,NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    self.navigationBar.shadowImage = [UIImage new];
+    self.navigationBar.tintColor = [UIColor grayColor];
+
+    
+    self.navigationBar.barTintColor = NavColor;
+    [UIApplication sharedApplication].statusBarStyle = UIBarStyleBlackOpaque;
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
-    [self.navigationBar setTintColor:[UIColor whiteColor]];
-    self.tabBarItem.selectedImage = [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [self.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:NavColor,NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
